@@ -1,0 +1,27 @@
+{
+  "name": "oppo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangpei001/OPPO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangpei001/OPPO/issues"
+  },
+  "homepage": "https://github.com/zhangpei001/OPPO#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-images": "^0.0.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
