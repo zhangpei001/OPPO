@@ -14,6 +14,11 @@ gulp.task("copyjs",function(){
 	gulp.src("js/*.js")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\oppo\\js"));
 });
+// 复制css文件
+gulp.task("copycss",function(){
+	gulp.src("css/*.css")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\oppo\\css"));
+});
 // 复制图片文件
 gulp.task("images",function(){
 	gulp.src("img/*.jpg")
@@ -46,6 +51,7 @@ gulp.task("concatanduglifyjs",function(){
 gulp.task("watchall",function(){
 	gulp.watch("index.html",["copyfile"]);
 	gulp.watch("js/*.js",["copyjs"]);
+	gulp.watch("css/*.css",["copycss"]);
 	gulp.watch("img/*.jpg",["images"]);
 	gulp.watch("css/*.scss",["sass"]);
 	gulp.watch("js/index.js",["concatanduglifyandrenamejs"]);

@@ -4,7 +4,8 @@
 <head>
 <meta charset="utf-8">
 <title>oppo首页</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 <body>
 <!-- 导航栏部分 -->
@@ -21,19 +22,114 @@
 				<li><a href="https://cloud.oppo.com/login.html">云服务</a></li>
 			</ul>
 		</div>
-		<div class="banner">
-			<img src="img/nav3.jpg"/>
-		</div>
 	</div>
+		<!-- banner -->
+	<div class="swiper-container">
+   		<div class="swiper-wrapper">
+		      <div class="swiper-slide"><img src="img/photo1.jpg"></div>
+		      <div class="swiper-slide"><img src="img/photo2.jpg"></div>
+		      <div class="swiper-slide"><img src="img/photo3.jpg"></div>
+		      <div class="swiper-slide"><img src="img/photo4.jpg"></div>
+		      <div class="swiper-slide"><img src="img/photo5.jpg"></div>
+		      <div class="swiper-slide"><img src="img/photo6.jpg"></div>
+    	</div>
+    <!-- Add Pagination -->
+    		<div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+	    	<div class="swiper-button-next"></div>
+	   	    <div class="swiper-button-prev"></div>
+    </div>
 
 <!-- logo -->
-	<!-- <div class="logo1">
-		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic1.jpg"/></a>
-		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic2.jpg"/></a>
-	</div>
-	<div class="logo2">
-		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic3.jpg"/></a>
-		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic4.jpg"/></a>
-	</div> -->
+    	 <div class="logo">
+    		<a class="logo1" href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic2.jpg"/></a>
+    		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic1.jpg"/></a>
+    	 </div>
+    	 <div class="logo">
+    		<a class="logo1" href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic4.jpg"/></a>
+    		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic3.jpg"/></a>
+    	 </div>
+<!-- section -->
+        <div class="section">
+        	<div class="one">
+        		<div class="le">
+        			  <ul>
+        				<li class="lis">
+        					<p>推荐机型</p>
+        				<ul>
+        					<li><a href="https://www.opposhop.cn/">R15</a></li>
+        					<li><a href="https://www.opposhop.cn/">R15梦幻版</a></li>
+        					<li><a href="https://www.opposhop.cn/">A1</a></li>
+        					<li><a href="https://www.opposhop.cn/">A3</a></li>
+        				</ul>
+        				</li>
+        				<li class="lis">
+        					<p>服务</p>
+        			    <ul>
+        					<li><a href="https://www.opposhop.cn/">以旧换新</a></li>
+        					<li><a href="https://www.opposhop.cn/">服务网点查询</a></li>
+        					<li><a href="https://www.opposhop.cn/">零配件价格查询</a></li>
+                            <li><a href="https://www.opposhop.cn/">官方授权网店</a></li>
+                            <li><a href="https://www.opposhop.cn/">预置软件公示</a></li>
+        				</ul>
+        				</li>
+        				<li class="lis">
+        					<p>关于我们</p>
+        				<ul>
+        					<li><a href="https://www.opposhop.cn/">关于OPPO</a></li>
+        					<li><a href="https://www.opposhop.cn/">新闻资讯</a></li>
+        					<li><a href="https://www.opposhop.cn/">加入我们</a></li>
+        				</ul>
+        				</li>
+        				<li class="lis">
+        					<p>商务合作</p>
+        				<ul>
+        					<li><a href="https://www.opposhop.cn/">平台开放</a></li>
+        					<li><a href="https://www.opposhop.cn/">采购相关</a></li>
+        				</ul>
+        				</li>
+        			  </ul>
+        		     </div>     				
+              </div>
+				 <span>4001-666-888 <br/>24小时全国热线</span> 
+        </div>
+
+<!--  footer -->
+       <div class="footer">
+       	<div class="footers">
+       		<p>
+       		   <a href="#">2005-2018</a>
+               <a href="#">OPPO</a>
+               <a href="#">版权所有</a>
+               <a href="#">粤ICP</a>
+               <a href="#">备12003911号-3</a>
+               <a href="#">京公网安备</a>
+               <a href="#">11010802011455号</a>
+               <a href="#">联系方式</a>
+               <a href="#">4001-666-888</a>
+               <a href="#">关注我们</a>
+            </p>
+       	</div>
+       </div>
 </body>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+ </script>
+
 </html>
