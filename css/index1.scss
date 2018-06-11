@@ -46,27 +46,6 @@ ul li{
 	padding: 0 18px;
 }
 
-/* banner */
-.swiper-container {
-      width: 100%;
-      height: 560px;
-    }
-
-
-//logos
-.logo{
-	width:100%;
-}
-.logo a{
-	display:block;
-	width:50%;
-}
-.logo a img{
-	width:100%;
-}
-.logo1{
-	float: right;
-}
 
 /*section*/
 .section{
@@ -103,14 +82,83 @@ ul li{
 }
 .section span{
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #464646;
     float:right;
     margin-top:100px;
     margin-right:100px;
     color:#828282;
 }
+//banner
 
+.banner {
+      width:100%;
+      height:1180;
+      a{
+		color:black;
+		}
+}
+.banner img{
+	width:100%;
+	height:500px;
+	
+}
+
+.first1{
+	position: relative;
+} 
+.first2{
+	position: relative;
+} 
+.first3{
+	position: relative;
+} 
+.first4{
+	position: relative;
+} 
+.first5{
+	position: relative;
+} 
+.words1{
+	font-size: 24px;  
+    letter-spacing: 10px;  
+    position: absolute;  
+    top:30%;  
+    left: 30%;
+    text-align:center;
+}  
+.words2{
+	font-size: 20px;  
+    letter-spacing: 10px;  
+    position: absolute;  
+    top:25%;  
+    left: 22%;
+    text-align:center;
+}  
+.words3{
+	font-size: 20px;  
+    letter-spacing: 10px;  
+    position: absolute;       
+    top:30%;  
+    left: 28%;
+    text-align:center;
+}  
+.words4{
+	font-size: 20px;  
+    letter-spacing: 10px;  
+    position: absolute;  
+    top:30%;  
+    left: 30%;
+    text-align:center;
+}  
+.words5{
+	font-size: 20px;  
+    letter-spacing: 10px;  
+    position: absolute;  
+    top:30%;  
+    left:35%;
+    text-align:center;
+}  
 
 /*footer*/
 .footer{
