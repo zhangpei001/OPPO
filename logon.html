@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>注册登录</title>
+<link rel="stylesheet" type="text/css" href="css/logon.css" />
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	
+</body>
+
+<!-- 导航栏部分 -->
+	<div class="container">
+		<a href="https://www.opposhop.cn/">OPPO官网</a>
+		<a href="https://www.oppo.com/cn/brand">OPPO社区</a>
+		<a href="https://www.opposhop.cn/">ColorOs</a>
+	</div>
+
+<!-- logon部分 -->
+	<div class="oppo">
+		<img src="img/logon.png"/>
+	</div>
+
+<!-- words部分 -->
+	<div class="words">
+		<p>登录OPPO账户可享受更多的服务</p>
+	</div>
+
+<!-- 表单部分 -->
+	<div class="button">
+		<div class="btn01">
+		
+		手机号码：<input id="phoneId" type="text" /><span id="phoneMsg"></span><br/>
+		输入密码：<input id="passId" type="text"  /><span id="passMsg"> </span><br/>
+		
+		<a href="https://www.opposhop.cn/" style="color:green">忘记密码</a><br>
+	
+		登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录：<input id="loadId" type="text" /><span id="loadMsg"></span><br/>
+		注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册：<input id="signId" type="text" /><span id="signMsg"></span><br/>
+
+		<a href="https://www.opposhop.cn/" style="color:gray">其他登录方式</a><br>
+		</div>
+	</div>
+
+<!-- 微信和QQ图片部分 -->
+	<div class="qq">
+		<a href="http://weixin.qq.com/"><img src="img/qq.png" /></a>
+		<a href="http://weixin.qq.com/"><img src="img/qq1.png"/></a>
+	</div>
+
+
+<!--  footer部分 -->
+ <div class="footer">
+ 	<div class="footers">
+ 		<p>
+ 		 <a href="#">2005-2018</a>
+         <a href="#">OPPO</a>
+         <a href="#">版权所有</a>
+         <a href="#">粤ICP</a>
+         <a href="#">备12003911号-3</a>
+         <a href="#">京公网安备</a>
+         <a href="#">11010802011455号</a>
+         <a href="#">联系方式</a>
+         <a href="#">4001-666-888</a>
+       </p>
+ 	</div>
+ </div>
+</html>
+
+<script type="text/javascript" src="js/regExpUtil.js"></script>
+<script type="text/javascript">
+
+function $(id){
+	return document.getElementById(id);
+}
+
+window.onload = function(){
+	$("phoneId").onblur = function(){
+		if(checkAll("phoneNumber",this.value)==false){
+			$("phoneMsg").innerHTML = "×";
+		}else{
+			$("phoneMsg").innerHTML = "√";
+		}
+	}
+	
+	$("passId").onblur = function(){		
+		if(!checkAll("passWord",this.value)){
+			$("passMsg").innerHTML = "×";
+		}else{
+			$("passMsg").innerHTML = "√";
+		}
+	}
+
+	
+	$("loadId").onblur = function(){
+		if(checkAll("loadNumber",this.value)){
+			$("loadMsg").innerHTML = "√";
+		}else{
+			$("loadMsg").innerHTML = "×";
+		}
+	}
+}
+
+</script>

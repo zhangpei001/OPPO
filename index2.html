@@ -3,16 +3,47 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>oppo首页</title>
+<title>oppo商城</title>
 <link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/pic.css">
 <link rel="stylesheet" type="text/css" href="css/index.css" />
+<style type="text/css">
+.show{
+    position:relative;
+    height: 300px;
+    width: 100%;
+
+}
+.show a{
+    position:relative;
+    display: block;
+    height: 100%;
+    width: 25%;
+    float: left;
+
+}
+.show a img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border:5px solid white;
+}
+.show1 p{
+    position:absolute;
+    font-size: 16px;  
+    font-color:black;
+    letter-spacing: 10px;  
+    top:90%;  
+    left:30%;
+    text-align:center;
+
+}
+</style>
 </head>
 <body>
 <!-- 导航栏部分 -->
 	<div class="container">
-
-		<a href="https://www.oppo.com/cn/" class="pic"><img src="img/oppo.png"/></a>
-
+    <a href="https://www.oppo.com/cn/" class="pic"><img src="img/oppo.png"/></a>
 		<div class="nav">
 			<ul>
 				<li><a href="https://www.opposhop.cn/">手机</a></li>
@@ -26,44 +57,57 @@
 			</ul>
 		</div>
 
-    <!-- <div class="divC">
-      <img src="img/phone1.png">
-      <img src="img/phone2.png">
-      <img src="img/phone3.png">
-      <img src="img/phone4.png">
-      <img src="img/phone5.png">
-      <img src="img/phone6.png">
-      <img src="img/phone7.png">
-      <img src="img/phone8.png">
-    </div> -->
-
-
-		<a href="https://www.oppo.com/cn/" class="pic1"><img src="img/oppo1.png"/></a>
+    <a href="https://www.oppo.com/cn/" class="pic1"><img src="img/oppo1.png"/></a>
 	</div>
 
 <!-- banner -->
 	<div class="swiper-container">
    		<div class="swiper-wrapper">
-		      <div class="swiper-slide"><img src="img/photo1.jpg"></div>
-		      <div class="swiper-slide"><img src="img/photo2.jpg"></div>
-		      <div class="swiper-slide"><img src="img/photo3.jpg"></div>
-		      <div class="swiper-slide"><img src="img/photo4.jpg"></div>
-		      <div class="swiper-slide"><img src="img/photo5.jpg"></div>
-		      <div class="swiper-slide"><img src="img/photo6.jpg"></div>
+		      <div class="swiper-slide"><img src="img/b1.jpg"></div>
+          <div class="swiper-slide"><img src="img/b2.jpg"></div>
+          <div class="swiper-slide"><img src="img/b3.jpg"></div>
+          <div class="swiper-slide"><img src="img/b4.jpg"></div>
+          <div class="swiper-slide"><img src="img/b5.jpg"></div>
+          <div class="swiper-slide"><img src="img/b6.jpg"></div>
     	</div>
     <!-- Add Pagination -->
     		<div class="swiper-pagination"></div>
     </div>
 
-<!-- logo -->
-    	 <div class="logo">
-    		<a class="logo1" href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic2.jpg"/></a>
-    		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic1.jpg"/></a>
-    	 </div>
-    	 <div class="logo">
-    		<a class="logo1" href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic4.jpg"/></a>
-    		<a href="http://hd.oppo.com/act/2018/0618/index.html"><img src="img/pic3.jpg"/></a>
-    	 </div>
+
+<!-- R15部分 -->
+ <div id="r15">
+  
+      <div class="words1">
+      <p>r15</p><br>
+      <h2>换色渐变，全新配色</h2><br>
+      <p>￥2699</p><br>
+      <p><a href="http://www.oppo.com/cn/about">立即购买></a></p>
+      </div>
+  
+ </div>
+
+
+
+<!--  show phone部分 -->
+<!-- show -->
+<div class="show">
+
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>超视野全面屏</p><img src="img/timg6.jpg"/></a>
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>千元全面屏</p><img src="img/timg2.jpg"/></a>
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>指纹识别</p><img src="img/timg3.jpg"/></a>
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>下单立减100元</p><img src="img/timg5.jpg"/></a>
+</div>
+
+<div class="show">
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>高配版 </p><img src="img/timg1.jpg"/></a>
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>前置1600万</p><img src="img/timg4.jpg"/></a>
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>钻石文理 </p><img src="img/timg5.jpg"/></a>
+    <a class="show1" href="http://hd.oppo.com/act/2018/0618/index.html"><p>后置1300万</p><img src="img/timg6.jpg"/></a>
+</div>
+
+
+
 <!-- section -->
         <div class="section">
         	<div class="one">
@@ -106,27 +150,28 @@
         			  </ul>
         		     </div>     				
               </div>
-				 <span><h3><b>4001-666-888 </b></h3><br/><h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24小时全国热线</h5></span> 
+				      <span><h3><b>4001-666-888 </b></h3><br/><h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24小时全国热线</h5></span> 
         </div>
 
 <!--  footer -->
-       <div class="footer">
-       	<div class="footers">
-       		<p>
-       		   <a href="#">2005-2018</a>
-               <a href="#">OPPO</a>
-               <a href="#">版权所有</a>
-               <a href="#">粤ICP</a>
-               <a href="#">备12003911号-3</a>
-               <a href="#">京公网安备</a>
-               <a href="#">11010802011455号</a>
-               <a href="#">联系方式</a>
-               <a href="#">4001-666-888</a>
-               <a href="#">关注我们</a>
-            </p>
-       	</div>
-       </div>
+ <div class="footer">
+ 	<div class="footers">
+ 		<p>
+ 		 <a href="#">2005-2018</a>
+         <a href="#">OPPO</a>
+         <a href="#">版权所有</a>
+         <a href="#">粤ICP</a>
+         <a href="#">备12003911号-3</a>
+         <a href="#">京公网安备</a>
+         <a href="#">11010802011455号</a>
+         <a href="#">联系方式</a>
+         <a href="#">4001-666-888</a>
+         <a href="#">关注我们</a>
+      </p>
+ 	</div>
+ </div>
 </body>
+<script src="js/jquery-1.11.3.js"></script>
 <script src="js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -145,6 +190,8 @@
         prevEl: '.swiper-button-prev',
       },
     });
+    $("#r15").load("123.html");
+
  </script>
 
 </html>
