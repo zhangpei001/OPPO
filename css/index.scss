@@ -46,6 +46,29 @@ ul li{
 	padding: 0 18px;
 }
 
+
+.divC{
+    width:200px;
+    height:200px;
+    display: none;
+    position:absolute;
+    top:10px;
+    left:120px;
+    z-index:999;
+    float:left;
+    overflow:hidden;
+	white-space:nowrap;
+    img{
+    	width:200px;
+    	height:200px;
+    	float:left;
+    }
+}
+.container:hover .divC{
+    display: block;
+}
+
+
 /* banner */
 .swiper-container {
       width: 100%;

@@ -1,0 +1,162 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>立方体动画</title>
+<style type="text/css">
+/*body,div,p,ul,ol,li,dl,dt,dd,form,table,tr,td,h1,h2,h3,h4,h5,h6,fieldset,input,textarea,figure{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height: 100%;
+}
+body{
+	background: url(img/body_bg.png) repeat-x;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}*/
+.box{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	transform-style: preserve-3d;
+	transform:rotateX(-30deg) rotateY(30deg);
+	animation:lft_ani 10s linear infinite;
+}
+.box:hover{
+	animation:lft_ani 10s linear infinite paused;
+}
+.box a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	height: 200px;
+	width: 200px;
+	transform-style: preserve-3d;
+}
+.box .bigBox{
+	width: 200px;
+	height: 200px;
+	background: #ac0;
+	opacity: .8;
+	border:1px solid white;
+	transition: all 1s;
+	/*background: url(img/r15a.jpg);*/
+	background-size:200px 200px; 
+}
+.box .smallBox{
+	width: 100px;
+	height: 100px;
+	background: black;
+	opacity: .4;
+	border: 1px solid white;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+.bigBox:nth-child(1){
+	transform:translateZ(100px);
+	background: url(img/r15a.jpg);
+	background-size:200px 200px; 
+
+}
+.bigBox:nth-child(2){
+	transform:translateZ(-100px);
+	background: url(img/r15b.jpg);
+	background-size:200px 200px; 
+
+}
+.bigBox:nth-child(3){
+	transform:rotateY(-90deg) translateZ(100px);
+	background: url(img/r15c.jpg);
+	background-size:200px 200px; 
+
+}
+.bigBox:nth-child(4){
+	transform:rotateY(90deg) translateZ(100px);
+	background: url(img/r15d.jpg);
+	background-size:200px 200px; 
+
+}
+.bigBox:nth-child(5){
+	transform:rotateX(90deg) translateZ(100px);
+	background: url(img/r15e.jpg);
+	background-size:200px 200px; 
+
+}
+.bigBox:nth-child(6){
+	transform:rotateX(-90deg) translateZ(100px);
+	background: url(img/r15c.jpg);
+	background-size:200px 200px; 
+
+}
+
+.box:hover .bigBox:nth-child(1){
+	transform:translateZ(150px);
+}
+.box:hover .bigBox:nth-child(2){
+	transform:translateZ(-150px);
+}
+.box:hover .bigBox:nth-child(3){
+	transform:rotateY(-90deg) translateZ(150px);
+}
+.box:hover .bigBox:nth-child(4){
+	transform:rotateY(90deg) translateZ(150px);
+}
+.box:hover .bigBox:nth-child(5){
+	transform:rotateX(90deg) translateZ(150px);
+}
+.box:hover .bigBox:nth-child(6){
+	transform:rotateX(-90deg) translateZ(150px);
+}
+
+
+
+.smallBox:nth-child(7){
+	transform:translateZ(50px);
+}
+.smallBox:nth-child(8){
+	transform:translateZ(-50px);
+}
+.smallBox:nth-child(9){
+	transform:rotateY(-90deg) translateZ(50px);
+}
+.smallBox:nth-child(10){
+	transform:rotateY(90deg) translateZ(50px);
+}
+.smallBox:nth-child(11){
+	transform:rotateX(90deg) translateZ(50px);
+}
+.smallBox:nth-child(12){
+	transform:rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes lft_ani{
+	0%{
+		transform:rotateX(0deg) rotateY(0deg);
+	}
+	100%{
+		transform:rotateX(360deg) rotateY(360deg);
+	}
+}
+</style>
+
+
+	<div class="box">
+		<a href="#" class="bigBox"></a>
+		<a href="#" class="bigBox"></a>
+		<a href="#" class="bigBox"></a>
+		<a href="#" class="bigBox"></a>
+		<a href="#" class="bigBox"></a>
+		<a href="#" class="bigBox"></a>
+		<a href="#" class="smallBox"></a>
+		<a href="#" class="smallBox"></a>
+		<a href="#" class="smallBox"></a>
+		<a href="#" class="smallBox"></a>
+		<a href="#" class="smallBox"></a>
+		<a href="#" class="smallBox"></a>
+	</div>
