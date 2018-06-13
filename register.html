@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>注册一号店</title>
+<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+	<div class="top">
+		<div class="top_left">
+			<a class="logo" href="#"><img src="img/logo2.jpg"/></a>
+			<p class="top_right">您好，欢迎光临1号店！<a href="#">请登录</a></p>
+		</div>
+	</div>
+	<div class="cen">
+		<img src="img/back1.png"/>
+		<img src="img/back2.png"/>
+		<img src="img/back3.png"/>
+		<img src="img/back4.png"/>
+		<img src="img/back5.png"/>
+		<h4>1号店注册</h4>
+		<div class="cen_top">
+			<form method="post" action="php/StuSave.php" onsubmit="check()">
+				<ul>
+					<li>
+						<span id="name3">用户名</span>
+						<input id="username1" name="username" type="text" placeholder=""/>
+						<!-- <div id="name">用户名不能为空</div> -->
+						<div id="name2">4-16位字符，可由中英文、数字或下划线组成</div>
+						<div id="name4">请输入正确的用户名</div>
+
+					</li>
+					<li>
+						<span id="phone2">手机号</span>
+						<input id="phone1" name="phone" type="text" placeholder=""/>
+						<div id="phone3">请填写正确的手机号，以便接收订单通知，找回密码等</div>
+						<div id="phone4">请输入正确的手机号</div>
+					</li>
+					<!-- <li>
+						<span>短信验证码</span>
+						<input type="text">
+						<button>获取验证码</button>
+					</li> -->
+					<li>
+						<span id="userword4">设置密码</span>
+						<input id="userword1" name="userword" type="password" placeholder=""/>
+						<div id="userword3">6-20大小写英文字母、符号或数字的组合</div>
+						<div id="userword7">请输入正确的密码</div>
+					</li>
+					<li>
+						<span id="userword6">确认密码</span>
+						<input id="userword2" name="" type="password" placeholder=""/>
+						<div id="userword5">请再次输入密码</div>
+						<div id="userword8">请保证两次密码的一致</div>
+					</li>
+					<li>
+						<div>
+							点击注册，表示您同意1号店
+							<a href="#">《服务协议及隐私声明》</a>
+						</div>
+						<input class="zc" type="submit" value="同意协议并注册" />
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<div class="bottom">
+		<a href="#">沪ICP备16050468号</a>|
+		<a href="#">沪B2-20170039</a>|
+		<a href="#">营业执照</a>
+		<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+function checkAll(type,value){
+	var reg = null;
+	switch(type){
+		case "username":reg = /^[a-zA-Z_]\w{5,15}$/;break;
+		case "phone":reg = /^1[^0126]\d{9}$/;break;
+		case "userword":reg = /^[a-zA-Z0-9]\w{6,16}$/;break;
+		break;
+		default:;
+	}
+	if(reg!=null){
+		if(reg.test(value)){
+			return true;
+		}
+	}
+	return false;
+}
+
+// 判断每个文本框是否获取到光标
+$(function(){
+	$('#username1').focusin(function(){
+		$("#name4").css("display","none");
+		$("#name2").animate({opacity:"show"}, 500);
+		$("#name3").animate({left: '-70px'}, "slow");
+	});
+
+	$('#phone1').focusin(function(){
+		// $("#phone3").css("display","block");
+		$("#phone4").css("display","none");
+		$("#phone2").animate({left: '-70px'}, "slow");
+		$("#phone3").animate({opacity:"show"}, 500);
+		});
+	$('#userword1').focusin(function(){
+		// $("#phone3").css("display","block");
+		$("#userword7").css("display","none");
+		$("#userword4").animate({left: '-70px'}, "slow");
+		$("#userword3").animate({opacity:"show"}, 500);
+		});
+	$('#userword2').focusin(function(){
+		// $("#phone3").css("display","block");
+		$("#userword6").animate({left: '-70px'}, "slow");
+		$("#userword5").animate({opacity:"show"}, 500);
+	});
+	
+	//记录用户名是否存在；
+	let hasUserName = false;
+// 每个文本框失去光标后的正则判断
+	//let arr = [false,false,false];
+	var str="000";
+	$('#username1').focusout(function(){	
+		if(checkAll("username",this.value)==false){
+			$("#username1").css("border","1px solid #fc3f83");
+			$("#name").css("display","none");
+			$("#name2").css("display","none");
+			$("#name4").css("display","block");			
+			//arr[0] =false;
+			str[0]="0";
+		}else{
+			$("#name2").css("display","none");
+			$("#username1").css("border","1px solid #3ffc6b");
+			//arr[0] =true;
+			str[0]="1";	
+		}	
+	});
+	$('#phone1').focusout(function(){	
+		if(checkAll("phone",this.value)==false){
+			$("#phone3").css("display","none");	
+			$("#phone4").css("display","block");
+			$("#phone1").css("border","1px solid #fc3f83");
+			str[0]="0";
+		
+		}else{
+			$("#phone4").css("display","none");
+			$("#phone3").css("display","none");	
+			$("#phone1").css("border","1px solid #3ffc6b");
+			str[0]="1";
+		}	
+	});
+	$('#userword1').focusout(function(){	
+		if(checkAll("userword",this.value)==false){
+			$("#userword7").css("display","block");
+			$("#userword3").css("display","none");
+			$("#userword1").css("border","1px solid #fc3f83");
+		}else{
+			$("#userword3").css("display","none");
+			$("#userword1").css("border","1px solid #3ffc6b");
+		}	
+	});
+	$('#userword2').focusout(function(){	
+		let pass1=$("#userword1").val();
+		let pass2=$("#userword2").val();
+
+		if (pass1 == pass2 && pass2 != ""){
+			$("#userword8").css("display","none");
+ 			$("#userword5").css("display","none");
+
+			$("#userword2").css("border","1px solid #3ffc6b");
+ 		}else{
+ 			$("#userword8").css("display","block");
+ 			$("#userword5").css("display","none");
+			$("#userword2").css("border","1px solid #fc3f83");
+
+ 		}
+	});
+	
+		$("#name3").one("click",function(){  
+      	// $("#name4").css("display","none");
+      	$("#username1")[0].focus();
+		$("#name3").animate({left: '-70px'}, "slow");
+		$("#name2").animate({opacity:"show"}, 500);
+	});
+	$("#phone2").one("click",function(){  
+      	$("#phone1")[0].focus();
+      	$("#phone2").animate({left: '-70px'}, "slow");
+		$("#phone3").animate({opacity:"show"}, 500);
+	});  
+	$("#userword4").one("click",function(){
+		$("#userword1")[0].focus();  
+      	$("#userword4").animate({left: '-70px'}, "slow");
+		$("#userword3").animate({opacity:"show"}, 500);
+	});
+	$("#userword6").one("click",function(){  
+		$("#userword2")[0].focus();-
+      	$("#userword6").animate({left: '-70px'}, "slow");
+		$("#userword5").animate({opacity:"show"}, 500);
+	});  
+
+})
+
+
+function check(event){
+	//1、判断每个文本框里的值是否合法（正则验证是否通过）
+	//if(checkAll("username1",$("#username1").val()) && checkAll("phone1",$("#phone1").val()) && checkAll("userword1",$("#userword1").val())){
+	if(str!="111" || hasUserName){
+		//2、如果有一个文本框没有正则通过，就不提交（阻止默认行为）
+		let evt = event || window.event;
+		//evt.returnValue = false;
+		evt.preventDefault();
+	}
+}
+	
+	  
+</script>
+</html>
