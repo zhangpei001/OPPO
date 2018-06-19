@@ -17,7 +17,8 @@ function checkAll(type,value){
 		case "phoneNumber":reg =  /^1[^0126]\d{9}$/;break;
 		case "passWord":reg =  /^[a-zA-Z_]\w{5,15}$/;break;
 		case "loadNumber":reg = /^1[^0126]\d{9}$/;break;
-		case "loadNumber":reg = /^\w+@[a-zA-Z0-9]+\.(com|cn|net|top|vip)$/;break;
+		case "username":reg = /^[a-zA-Z_]\w{5,15}$/;break;
+		case "email":reg = /^\w+@[a-zA-Z0-9]+\.(com|cn|net|top|vip)$/;break;
 	}
 	if(reg!=null){
 		if(reg.test(value)){

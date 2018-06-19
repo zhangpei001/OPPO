@@ -20,9 +20,15 @@
 <!-- 文本框部分 -->
 <div class="table">
 	<div class="number">
-		<input id="phoneId" type="text" value="+86" style="width:300px; height:45px; background:#006bbd; border:1px solid white;color:white"><span id="phoneMsg"></span>
+		<input id="phoneId" type="text" placeholder="+86" style="width:300px; height:45px; background:#006bbd; border:1px solid white;color:white"><span id="phoneMsg"></span>
 	</div>
 	<div class="login">
+		<!-- <input id="phoneId" type="text" value="+86" style="width:300px; height:45px; background:#006bbd; border:1px solid white;color:white"><span id="phoneMsg"></span>
+		
+		<input id="passId" type="text" value="passWord" style="width:300px; height:45px; background:#006bbd; border-bottom:1px solid white;color:white"><span id="passMsg"></span>
+		
+		<input id="emailId" type="text" style="width:300px; height:45px; background:#006bbd; border-bottom:1px solid white;color:white"><span id="emailMsg"></span>
+		 -->
 	<p>请输入手机号码</p>
 	<p>请输入密码</p>
 	<a href="#">使用邮箱登录</a>
@@ -67,7 +73,7 @@ window.onload = function(){
 		if(checkAll("phoneNumber",this.value)){
 			$("phoneMsg").innerHTML = "√";
 		}else{
-			$("phoneMsg").innerHTML = "亲，手机格式不正确";
+			$("phoneMsg").innerHTML = "×";
 		}
 	}
 	
