@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Demo</title>
-
+  <title>first page</title>
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
@@ -586,21 +586,10 @@
 
 <!-- 返回顶部侧边栏部分开始 -->
 <div class="aside" style="bottom: 100px;">
-  <ul class="aside_list">
-    <li class="aside_list_one">
-      <a href="javascript:;"></a>
-      <div class="bus"><img src="images/bus.png"/></div>
-      <!-- <div><p>购物车</p></div> -->
-      <span>0</span>
-    </li>
-    <li class="aside_list_two">
-      <div class="app"><a href="#"><span>APP</span></a></div>
-    </li>
-    <li class="aside_list_three">
-      <div class="fuhao"><a href="#"><span>^</span></a></div>
-      <!-- <div><p>^回到顶部</p></div> -->
-    </li>
-  </ul>
+    <p class="p1"><i class="iconfont icon-gouwuche"></i><span>购物车</span></p>
+    <p class="p2" id="app">APP</p>
+    <p class="p1" id="back"><i class="iconfont icon-angle-up"></i><span>返回顶部</span></p>
+    <div class="er"><img id="ma" src="images/erweima.png"/></div>
 </div>
 <!-- 返回顶部侧边栏部分开始 -->
 
@@ -786,6 +775,33 @@
         w: doc_h,
         h: 760
       });
+    // 鼠标划过app这个盒子改变图片的top 
+      $("#app").mouseover(function(){
+        $("#ma").animate({top:'0px'});
+        $("#app").css("background","#515151");
+        
+      })
+      $("#ma").mouseout(function(){
+        $("#ma").animate({top:'246px'});
+      })
+       
+      $("#back").click(function(){
+       $(window).scrollTop(0);
+      })
+
+      $("#ma").mouseover(function(){
+        // $("#ma").css("top","0px");
+        $("#app").css("background","#515151");
+      })
+      $("#ma").mouseout(function(){
+        $("#app").css("background","#d8d8d8");
+      })
+      //mouseover和mouseout 的集合
+      $("#ma").hover(function () {
+       $("#app").stop(false,true).slideToggle(500);
+     });
+
+
     });
 
   </script>
